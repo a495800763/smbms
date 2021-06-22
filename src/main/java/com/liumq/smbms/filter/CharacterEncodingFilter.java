@@ -15,7 +15,7 @@ public class CharacterEncodingFilter implements Filter {
         req.setCharacterEncoding("utf-8");
 
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
-        resp.setContentType("text/html;charset=utf-8");
+        //resp.setContentType("text/html;charset=utf-8");
         resp.setCharacterEncoding("utf-8");
 
 
