@@ -47,7 +47,7 @@ public class BaseDao {
 
 
     //编写查询公共方法
-    public static ResultSet execute(Connection connection, String sql, Object[] params, ResultSet rs, PreparedStatement preparedStatement) throws SQLException {
+    public static ResultSet execute(Connection connection,PreparedStatement preparedStatement,ResultSet rs, String sql, Object[] params) throws SQLException {
         preparedStatement = connection.prepareStatement(sql);
         for (int i = 0; i < params.length; i++) {
             preparedStatement.setObject(i + 1, params[i]);
